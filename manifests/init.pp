@@ -1,6 +1,6 @@
-class packages(
+class install_packages(
   $packages = []){
-  class { 'packages::install':
+  class { 'install_packages::install':
     packages => $packages,
   }
 }
