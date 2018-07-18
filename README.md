@@ -1,2 +1,2 @@
-# puppet-install_packages
+# puppet-packages
 Simple puppet module to install packages

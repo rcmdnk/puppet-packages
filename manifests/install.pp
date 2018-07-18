@@ -1,4 +1,4 @@
-class install_packages::install(
+class packages::install(
   $packages = []){
   package {$packages:
     ensure => installed,
