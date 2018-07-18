@@ -1,5 +1,5 @@
 class packages::install(
-  $packages = [],){
+  $packages = []){
   package {$packages:
     ensure => installed,
   }

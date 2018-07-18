@@ -1,5 +1,5 @@
 class packages(
-  packages = []){
+  $packages = []){
   class { 'packages::install':
     packages => $packages,
   }
