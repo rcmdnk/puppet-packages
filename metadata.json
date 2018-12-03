@@ -1,0 +1,19 @@
+{
+  "name": "puppet-packages",
+  "version": "0.0.1",
+  "author": "Michiru Kaneda",
+  "summary": "Simple puppet module to install packages",
+  "license": "MIT",
+  "source": "https://github.com/mickaneda/puppet-packages",
+  "description": "Simple puppet module to install packages",
+  "issues_url": "https://github.com/mickaneda/puppet-packages/issues",
+  "tags": [
+  ],
+  "project_page": "https://github.com/mickaneda/puppet-packages",
+  "requirements": [
+  ],
+  "operatingsystem_support": [
+  ],
+  "dependencies": [
+  ]
+}
