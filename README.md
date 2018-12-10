@@ -1,2 +1,2 @@
 # puppet-packages
-Simple puppet module to install packages
+Simple yum puppet module to install packages
