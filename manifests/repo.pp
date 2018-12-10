@@ -10,7 +10,7 @@ class packages::repo(
 
     if has_key($attrs, "gpgkey") {
       file {$attrs["gpgkey"]["path"]:
-        * => $attrs["gpgkey"]["attrs"],
+        * => $attrs["gpgkey"]["attributes"],
       }
     }
   }
