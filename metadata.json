@@ -1,6 +1,6 @@
 {
   "name": "puppet-packages",
-  "version": "0.0.1",
+  "version": "0.2.2",
   "author": "Michiru Kaneda",
   "summary": "Simple puppet module to install packages",
   "license": "MIT",
