@@ -1,24 +1,28 @@
 class packages(
   $repos = {},
+  $repos_add = {},
   $rpms = {},
+  $rpms_add = {},
   $packages = [],
   $packages_add = [],
   $packages_uninstall = [],
   $packages_uninstall_add = []
 ){
   Class['packages::repo'] -> Class['packages::rpm'] -> Class['packages::install']
+  $repos_all = deep_merge($repos, $repos_add)
   class { 'packages::repo':
-    repos => $repos,
+    repos => $repos_all,
   }
+  $rpms_all = deep_merge($rmps, $rpms_add)
   class { 'packages::rpm':
-    rpms => $rpms,
+    rpms => $rpms_all,
   }
-  $packages_list = $packages + $packages_add
+  $packages_all = $packages + $packages_add
   class { 'packages::install':
-    packages => $packages_list,
+    packages => $packages_all,
   }
-  $packages_uninstall_list = $packages_uninstall + $packages_uninstall_add
+  $packages_uninstall_all = $packages_uninstall + $packages_uninstall_add
   class { 'packages::uninstall':
-    packages => $packages_uninstall_list,
+    packages => $packages_uninstall_all,
   }
 }
