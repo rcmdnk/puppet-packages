@@ -13,7 +13,7 @@ class packages(
   class { 'packages::repo':
     repos => $repos_all,
   }
-  $rpms_all = deep_merge($rmps, $rpms_add)
+  $rpms_all = deep_merge($rpms, $rpms_add)
   class { 'packages::rpm':
     rpms => $rpms_all,
   }
