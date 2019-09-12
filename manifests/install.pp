@@ -1,6 +1,8 @@
 class packages::install(
   $packages = []){
-  package {$packages:
-    ensure => installed,
-  }
+  $packages.each |String $p| {
+    if ! defined(Package[$p]) {
+      package{$p:
+        ensure => installed,
+      }                                                                                                                                    }                                                                                                                                    }
 }
